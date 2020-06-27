@@ -10,62 +10,48 @@ class UserSeeder extends Seeder{
         DB::table('users')->delete();
         $date = $this->randDate();
         DB::table('users')->insert([
-            'prenom'=>'Bamba',
-            'nom'=>'DEME',
-            'adresse'=>'Parcelles',
-            'telephone'=>'777442511',
+            'username'=>'bambademe',
             'email'=>'cheikhbambademe@gmail.com',
             'password'=>bcrypt('bamba'),
-            'role_id'=>rand(1,3),
+            //'role_id'=>rand(1,3),
+            'role_id'=>2,
             'created_at'=>$date,
             'updated_at'=>$date
         ]);
         
         $date = $this->randDate();
         DB::table('users')->insert([
-            'prenom'=>'Sourah',
-            'nom'=>'Diene',
-            'adresse'=>'Parcelles',
-            'telephone'=>'777442511',
+            'username'=>'sourah',
             'email'=>'sourah@gmail.com',
             'password'=>bcrypt('sourah'),
-            'role_id'=>rand(1,3),
+            'role_id'=>3,
             'created_at'=>$date,
             'updated_at'=>$date
         ]);
         $date = $this->randDate();
         DB::table('users')->insert([
-            'prenom'=>'Mandaw',
-            'nom'=>'Diop',
-            'adresse'=>'Parcelles',
-            'telephone'=>'777442511',
+            'username'=>'mandaw17',
             'email'=>'mandaw@gmail.com',
             'password'=>bcrypt('mandaw'),
-            'role_id'=>rand(1,3),
+            'role_id'=>1,
             'created_at'=>$date,
             'updated_at'=>$date
         ]);
         $date = $this->randDate();
         DB::table('users')->insert([
-            'prenom'=>'Diana',
-            'nom'=>'Diabong',
-            'adresse'=>'Parcelles',
-            'telephone'=>'777442511',
+            'username'=>'aidadiallo',
             'email'=>'diana@gmail.com',
             'password'=>bcrypt('diana'),
-            'role_id'=>rand(1,3),
+            'role_id'=>3,
             'created_at'=>$date,
             'updated_at'=>$date
         ]);
         $date = $this->randDate();
         DB::table('users')->insert([
-            'prenom'=>'Aline',
-            'nom'=>'Mbaye',
-            'adresse'=>'Parcelles',
-            'telephone'=>'777442511',
+            'username'=>'aline',
             'email'=>'alinembaye@gmail.com',
             'password'=>bcrypt('aline'),
-            'role_id'=>rand(1,3),
+            'role_id'=>3,
             'created_at'=>$date,
             'updated_at'=>$date
         ]);

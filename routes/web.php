@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/encadrant','EncadrantController@home');
+Route::resource('/encadrant','EncadrantController');
+Route::resource('/etudiant','EtudiantController');
