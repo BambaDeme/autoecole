@@ -23,3 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/encadrant','EncadrantController@home');
 Route::resource('/encadrant','EncadrantController');
 Route::resource('/etudiant','EtudiantController');
+
+// FAQ
+Route::get("faq",["as"=>"faqView","uses"=>"FaqController@getQuestion"]);
+Route::post("faq","FaqController@postQuestion");
+Route::get("show/{n}",["as"=>"show","uses"=>"FaqController@show"]);
+Route::post("saveRep","FaqController@postReponse");

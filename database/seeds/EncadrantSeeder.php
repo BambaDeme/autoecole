@@ -6,8 +6,8 @@ class EncadrantSeeder extends Seeder{
 		DB::table('encadrants')->delete();
 
         DB::table('encadrants')->insert([
-            'user_id'=>2
+            'user_id'=>1
         ]);
-        
+
 	}
 }
