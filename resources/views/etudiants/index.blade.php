@@ -41,7 +41,7 @@ encadrant
                                 <img src="/{{Auth::user()->encadrant->img}}" class="img-thumbnail rounded-circle" alt="profile" style="width: 250px; height: 250px;">
                             @else
                                 <img src="/images/avatar_2x.png" class="rounded-circle" alt="profile">
-                            @endif   
+                            @endif
                         </div>
                         <div class="col-sm-6 col-md-6" style="padding-top: 50px;">
                             <h4>{{ $etudiant->prenom}} {{ $etudiant->nom}}</h4>

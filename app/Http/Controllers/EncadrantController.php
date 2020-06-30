@@ -5,10 +5,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests\EncadrantUpdateRequest;
 use App\Repositories\EncadrantRepository;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 class EncadrantController extends Controller
 {
     protected $encadrant;
-    
+
     public function __construct(EncadrantRepository $encadrant)
     {
         $this->middleware('auth');
@@ -25,7 +28,7 @@ class EncadrantController extends Controller
      */
     public function index()
     {
-        //
+      //
         return view('encadrant.index');
     }
 
@@ -93,7 +96,7 @@ class EncadrantController extends Controller
                 if($image->move($chemin,$nom)){
                     $inputs['img'] = $chemin.'/'.$nom;
                 }
-            }      
+            }
         }
         $this->encadrant->update($inputs,$id);
         return view('encadrant.index')->with("status","Informations modifies avec succes");

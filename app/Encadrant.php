@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Encadrant extends Model
 {
@@ -11,5 +12,5 @@ class Encadrant extends Model
     	return $this->belongsTo('App\User');
     }
 
-    
+
 }
